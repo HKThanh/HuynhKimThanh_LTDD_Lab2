@@ -15,4 +15,27 @@ Array.prototype.mapFN = function (callBackFn) {
 
     return newArray;
 }
-console.log(arr.mapFN(fn));
+// console.log(arr.mapFN(fn));
+
+// Filter
+const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
+
+// const result = words.filter((word) => word.length > 6);
+
+// console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+// Rewrite:
+Array.prototype.filter1 = function (callBackFN) {
+    let newArray = [];
+    let length = this.length;
+    for (let i = 0; i < length; i++) {
+        if (callBackFN(this[i])) {
+            newArray.push(this[i]);
+        }
+    }
+
+    return newArray;
+}
+
+const result = words.filter1((word) => word.length > 6);
+console.log(result)
