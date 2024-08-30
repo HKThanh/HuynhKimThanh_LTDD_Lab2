@@ -32,11 +32,23 @@ let first100PrimeNumbers = () => {
     }
     return array;
 }
-let result = first100PrimeNumbers();
-console.log(result);
-let sum = first100PrimeNumbers().reduce((accumulator, currentValue) => accumulator + currentValue);
-console.log(`Sum of first 100 prime numbers: ${sum}`);
+// let result = first100PrimeNumbers();
+// console.log(result);
+// let sum = first100PrimeNumbers().reduce((accumulator, currentValue) => accumulator + currentValue);
+// console.log(`Sum of first 100 prime numbers: ${sum}`);
 // 29. Print the distance between the first 100 prime numbers
+let distanceBetweenFirst100PrimeNum = () => {
+    let primeNumbers = first100PrimeNumbers();
+    let length = primeNumbers.length;
+    let distance = [];
+    for (let i = 0; i < length - 1; i++) {
+        distance.push(primeNumbers[i + 1] - primeNumbers[i]);
+    }
+    return distance;
+}
+
+let result = distanceBetweenFirst100PrimeNum();
+console.log(result);
 // 30. Create a function that will add two positive numbers of indefinite size. The
 // numbers
 // are received as strings and the result should be also provided as string.
