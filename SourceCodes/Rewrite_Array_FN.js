@@ -1,4 +1,4 @@
-// Map
+// map
 let fn = (item) => {
     return item ** 2;
 }
@@ -17,8 +17,8 @@ Array.prototype.mapFN = function (callBackFn) {
 }
 // console.log(arr.mapFN(fn));
 
-// Filter
-const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
+// filter
+// const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
 
 // const result = words.filter((word) => word.length > 6);
 
@@ -37,5 +37,37 @@ Array.prototype.filter1 = function (callBackFN) {
     return newArray;
 }
 
-const result = words.filter1((word) => word.length > 6);
-console.log(result)
+// const result = words.filter1((word) => word.length > 6);
+// console.log(result)
+
+// reduce
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 2;
+let reduceFN = (accumulator, currentValue) => {
+    console.log('accumulator: ' + accumulator);
+    console.log('currentValue: ' + currentValue);
+    console.log('--------------------------')
+    return accumulator + currentValue;
+}
+// const sumWithInitial = array1.reduce(reduceFN, initialValue);
+
+// console.log(sumWithInitial);
+// Expected output: 10
+Array.prototype.myReduce = function (callbackFN, initialValue) {
+    let accumulator = initialValue;
+    let i = 0;
+    if (arguments.length < 2) {
+        i = 1;
+        accumulator = this[0];
+    }
+    for (; i < this.length; i++) {
+        accumulator = callbackFN(accumulator, this[i]);
+    }
+    return accumulator;
+}
+let resultWithOutInitialValue = array1.myReduce(reduceFN);
+console.log("New reduce function result without initialValue: " + resultWithOutInitialValue);
+let resultWithInitialValue = array1.myReduce(reduceFN, 3);
+console.log("New reduce function result with initialValue: " + resultWithInitialValue)
