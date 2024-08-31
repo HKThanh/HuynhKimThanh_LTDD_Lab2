@@ -47,8 +47,31 @@ let distanceBetweenFirst100PrimeNum = () => {
     return distance;
 }
 
-let result = distanceBetweenFirst100PrimeNum();
-console.log(result);
+// let result = distanceBetweenFirst100PrimeNum();
+// console.log(result);
 // 30. Create a function that will add two positive numbers of indefinite size. The
 // numbers
 // are received as strings and the result should be also provided as string.
+function add(a, b) {
+    let sum = '';
+    let carry = 0;
+    let length = Math.max(a.length, b.length);
+    a = a.padStart(length, '0');
+    b = b.padStart(length, '0');
+    for (let i = length - 1; i >= 0; i--) {
+        let digitSum = parseInt(a[i]) + parseInt(b[i]) + carry;
+        if (digitSum > 9) {
+            carry = 1;
+            digitSum -= 10;
+        } else {
+            carry = 0;
+        }
+        sum = digitSum + sum;
+    }
+    if (carry) {
+        sum = carry + sum;
+    }
+    return sum;
+}
+
+console.log(add('129', '00123'));
