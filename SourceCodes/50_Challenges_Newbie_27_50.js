@@ -90,6 +90,12 @@ function capitalizeFirstLetter(text) {
 
 console.log(capitalizeFirstLetter('hello world!'));
 // 33. Calculate the sum of numbers received in a comma delimited string
+function sumOfNumbers(str) {
+    let numbers = str.split(',');
+    return numbers.reduce((accumulator, currentValue) => accumulator + parseInt(currentValue), 0);
+}
+
+console.log(sumOfNumbers('1,2,3,4,5,6,7,8,9,10'));
 // 34. Create a function that returns an array with words inside a text.
 // 35. Create a function to convert a CSV text to a “bi-dimensional” array
 // 36. Create a function that converts a string to an array of characters
