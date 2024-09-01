@@ -80,7 +80,7 @@ function countWords(text) {
     return text.split(' ').length;
 }
 
-console.log(`Numbers of words in the text: ${countWords('Hello World!')}`);
+// console.log(`Numbers of words in the text: ${countWords('Hello World!')}`);
 // 32. Create a function that will capitalize the first letter of each word in a text
 function capitalizeFirstLetter(text) {
     let words = text.split(' ');
@@ -108,15 +108,20 @@ function csvToArray(text) {
     return rows.map(row => row.split(','));
 }
 
-console.log(csvToArray('1,2,3\n4,5,6\n7,8,9'));
+// console.log(csvToArray('1,2,3\n4,5,6\n7,8,9'));
 // 36. Create a function that converts a string to an array of characters
 function stringToArray(text) {
     return text.split('');
 }
 
-console.log(stringToArray('Hello World!'));
+// console.log(stringToArray('Hello World!'));
 // 37. Create a function that will convert a string in an array containing the ASCII codes
 // of each character
+function stringToAscii(text) {
+    return text.split('').map(char => char.charCodeAt(0));
+}
+
+console.log(stringToAscii('Hello World!'));
 // 38. Create a function that will convert an array containing ASCII codes in a string
 // 39. Implement the Caesar cypher
 // 40. Implement the bubble sort algorithm for an array of numbers
