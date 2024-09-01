@@ -121,8 +121,13 @@ function stringToAscii(text) {
     return text.split('').map(char => char.charCodeAt(0));
 }
 
-console.log(stringToAscii('Hello World!'));
+// console.log(stringToAscii('Hello World!'));
 // 38. Create a function that will convert an array containing ASCII codes in a string
+function asciiToString(arr) {
+    return arr.map(code => String.fromCharCode(code)).join('');
+}
+
+console.log(asciiToString([72, 101, 108, 108, 111]));
 // 39. Implement the Caesar cypher
 // 40. Implement the bubble sort algorithm for an array of numbers
 // 41. Create a function to calculate the distance between two points defined by their x,
