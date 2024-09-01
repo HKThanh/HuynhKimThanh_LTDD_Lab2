@@ -88,15 +88,20 @@ function capitalizeFirstLetter(text) {
     return capitalizedWords.join(' ');
 }
 
-console.log(capitalizeFirstLetter('hello world!'));
+// console.log(capitalizeFirstLetter('hello world!'));
 // 33. Calculate the sum of numbers received in a comma delimited string
 function sumOfNumbers(str) {
     let numbers = str.split(',');
     return numbers.reduce((accumulator, currentValue) => accumulator + parseInt(currentValue), 0);
 }
 
-console.log(sumOfNumbers('1,2,3,4,5,6,7,8,9,10'));
+// console.log(sumOfNumbers('1,2,3,4,5,6,7,8,9,10'));
 // 34. Create a function that returns an array with words inside a text.
+function wordsInText(text) {
+    return text.split(' ');
+}
+
+console.log(wordsInText('Hello World!'));
 // 35. Create a function to convert a CSV text to a “bi-dimensional” array
 // 36. Create a function that converts a string to an array of characters
 // 37. Create a function that will convert a string in an array containing the ASCII codes
