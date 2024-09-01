@@ -101,8 +101,14 @@ function wordsInText(text) {
     return text.split(' ');
 }
 
-console.log(wordsInText('Hello World!'));
+// console.log(wordsInText('Hello World!'));
 // 35. Create a function to convert a CSV text to a “bi-dimensional” array
+function csvToArray(text) {
+    let rows = text.split('\n');
+    return rows.map(row => row.split(','));
+}
+
+console.log(csvToArray('1,2,3\n4,5,6\n7,8,9'));
 // 36. Create a function that converts a string to an array of characters
 // 37. Create a function that will convert a string in an array containing the ASCII codes
 // of each character
