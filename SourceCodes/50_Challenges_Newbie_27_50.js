@@ -110,6 +110,11 @@ function csvToArray(text) {
 
 console.log(csvToArray('1,2,3\n4,5,6\n7,8,9'));
 // 36. Create a function that converts a string to an array of characters
+function stringToArray(text) {
+    return text.split('');
+}
+
+console.log(stringToArray('Hello World!'));
 // 37. Create a function that will convert a string in an array containing the ASCII codes
 // of each character
 // 38. Create a function that will convert an array containing ASCII codes in a string
