@@ -127,8 +127,21 @@ function asciiToString(arr) {
     return arr.map(code => String.fromCharCode(code)).join('');
 }
 
-console.log(asciiToString([72, 101, 108, 108, 111]));
+// console.log(asciiToString([72, 101, 108, 108, 111]));
 // 39. Implement the Caesar cypher
+function caesarCipher(text, shift) {
+    return text.split('').map(char => {
+        let code = char.charCodeAt(0);
+        if (code >= 65 && code <= 90) {
+            code = 65 + ((code - 65 + shift) % 26);
+        } else if (code >= 97 && code <= 122) {
+            code = 97 + ((code - 97 + shift) % 26);
+        }
+        return String.fromCharCode(code);
+    }).join('');
+}
+
+console.log(caesarCipher('Hello World!', 3));
 // 40. Implement the bubble sort algorithm for an array of numbers
 // 41. Create a function to calculate the distance between two points defined by their x,
 //     y
