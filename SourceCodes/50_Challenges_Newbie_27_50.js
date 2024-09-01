@@ -82,6 +82,13 @@ function countWords(text) {
 
 console.log(`Numbers of words in the text: ${countWords('Hello World!')}`);
 // 32. Create a function that will capitalize the first letter of each word in a text
+function capitalizeFirstLetter(text) {
+    let words = text.split(' ');
+    let capitalizedWords = words.map(word => word[0].toUpperCase() + word.slice(1));
+    return capitalizedWords.join(' ');
+}
+
+console.log(capitalizeFirstLetter('hello world!'));
 // 33. Calculate the sum of numbers received in a comma delimited string
 // 34. Create a function that returns an array with words inside a text.
 // 35. Create a function to convert a CSV text to a “bi-dimensional” array
