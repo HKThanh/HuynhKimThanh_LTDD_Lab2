@@ -141,8 +141,23 @@ function caesarCipher(text, shift) {
     }).join('');
 }
 
-console.log(caesarCipher('Hello World!', 3));
+// console.log(caesarCipher('Hello World!', 3));
 // 40. Implement the bubble sort algorithm for an array of numbers
+function bubbleSort(arr) {
+    let length = arr.length;
+    for (let i = 0; i < length; i++) {
+        for (let j = 0; j < length - 1 - i; j++) {
+            if (arr[j] > arr[j + 1]) {
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    return arr;
+}
+
+console.log(`Bubble sort: ${bubbleSort([4, 5, -1, 20, 1])}`);
 // 41. Create a function to calculate the distance between two points defined by their x,
 //     y
 // coordinates
