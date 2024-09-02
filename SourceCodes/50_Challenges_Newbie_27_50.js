@@ -157,10 +157,14 @@ function bubbleSort(arr) {
     return arr;
 }
 
-console.log(`Bubble sort: ${bubbleSort([4, 5, -1, 20, 1])}`);
-// 41. Create a function to calculate the distance between two points defined by their x,
-//     y
+// console.log(`Bubble sort: ${bubbleSort([4, 5, -1, 20, 1])}`);
+// 41. Create a function to calculate the distance between two points defined by their x,y
 // coordinates
+function distanceBetweenPoints(x1, y1, x2, y2) {
+    return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+}
+
+console.log(distanceBetweenPoints(1, 1, -4, -5));
 // 42. Create a function that will return a Boolean value indicating if two circles
 // defined by center coordinates and radius are intersecting
 // 43. Create a function that will receive a bi-dimensional array as argument and a
