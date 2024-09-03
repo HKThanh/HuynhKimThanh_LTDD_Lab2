@@ -164,12 +164,22 @@ function distanceBetweenPoints(x1, y1, x2, y2) {
     return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
 }
 
-console.log(distanceBetweenPoints(1, 1, -4, -5));
+// console.log(distanceBetweenPoints(1, 1, -4, -5));
 // 42. Create a function that will return a Boolean value indicating if two circles
 // defined by center coordinates and radius are intersecting
+function circlesIntersecting(x1, y1, r1, x2, y2, r2) {
+    return distanceBetweenPoints(x1, y1, x2, y2) <= r1 + r2;
+}
+
+// console.log(circlesIntersecting(0, 0, 5, 6, 0, 5));
 // 43. Create a function that will receive a bi-dimensional array as argument and a
 // number and will extract as a unidimensional array the column specified by the
 // number
+function extractColumn(arr, column) {
+    return arr.map(row => row[column]);
+}
+
+console.log(extractColumn([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 1));
 // 44. Create a function that will convert a string containing a binary number into a
 // number
 // 45. Create a function to calculate the sum of all the numbers in a jagged array
