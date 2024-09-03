@@ -200,9 +200,14 @@ function maxOfJaggedArray(arr) {
     return Math.max(...arr.flat(Infinity));
 }
 
-console.log(maxOfJaggedArray([1, 2, [3, 4, [5, 6, [7, 8, 9]]]]));
+// console.log(maxOfJaggedArray([1, 2, [3, 4, [5, 6, [7, 8, 9]]]]));
 // 47. Deep copy a jagged array with numbers or other arrays in a new array
 // 48. Create a function to return the longest word in a string
+function longestWord(text) {
+    return text.split(' ').reduce((longest, current) => current.length > longest.length ? current : longest);
+}
+
+console.log(longestWord('Hello World!, LongestWord'));
 // 49. Shuffle an array of strings
 // 50. Create a function that will receive n as argument and return an array of n
 // random numbers from 1 to n. The numbers should be unique inside the array.
