@@ -207,7 +207,12 @@ function longestWord(text) {
     return text.split(' ').reduce((longest, current) => current.length > longest.length ? current : longest);
 }
 
-console.log(longestWord('Hello World!, LongestWord'));
+// console.log(longestWord('Hello World!, LongestWord'));
 // 49. Shuffle an array of strings
+function shuffleArray(arr) {
+    return arr.sort(() => Math.random() - 0.5);
+}
+
+console.log(shuffleArray(['Hello', 'World', 'LongestWord', 'a', 'b', 'X', 'Y', 'Z']));
 // 50. Create a function that will receive n as argument and return an array of n
 // random numbers from 1 to n. The numbers should be unique inside the array.
