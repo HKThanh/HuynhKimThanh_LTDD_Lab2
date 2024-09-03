@@ -186,10 +186,15 @@ function binaryToNumber(binary) {
     return parseInt(binary, 2);
 }
 
-console.log(binaryToNumber('1010'));
+// console.log(binaryToNumber('1010'));
 // 45. Create a function to calculate the sum of all the numbers in a jagged array
 // (contains numbers or other arrays of numbers on an unlimited number of
 // levels)
+function sumOfJaggedArray(arr) {
+    return arr.flat(Infinity).reduce((accumulator, currentValue) => accumulator + currentValue);
+}
+
+console.log(sumOfJaggedArray([1, 2, [3, 4, [5, 6, [7, 8, 9]]]]));
 // 46. Find the maximum number in a jagged array of numbers or array of numbers
 // 47. Deep copy a jagged array with numbers or other arrays in a new array
 // 48. Create a function to return the longest word in a string
