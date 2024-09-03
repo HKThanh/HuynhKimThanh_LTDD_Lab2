@@ -225,8 +225,23 @@ function randomUniqueNumbers(n) {
     return shuffleArray(arr);
 }
 
-console.log(randomUniqueNumbers(10));
+// console.log(randomUniqueNumbers(10));
 // 51. Find the frequency of letters inside a string. Return the result as an array of
 // arrays. Each subarray has 2 elements: letter and number of occurrences.
+function frequencyOfLetters(text) {
+    let frequency = {};
+    for (let i = 0; i < text.length; i++) {
+        let char = text[i];
+        if (frequency[char]) {
+            frequency[char]++;
+        } else {
+            frequency[char] = 1;
+        }
+    }
+
+    return Object.entries(frequency);
+}
+
+console.log(frequencyOfLetters('abcd abc bca d'));
 // 52. Calculate Fibonacci(500) with high precision (all digits)
 // 53. Calculate 70! with high precision (all digits)
