@@ -242,6 +242,31 @@ function frequencyOfLetters(text) {
     return Object.entries(frequency);
 }
 
-console.log(frequencyOfLetters('abcd abc bca d'));
+// console.log(frequencyOfLetters('abcd abc bca d'));
 // 52. Calculate Fibonacci(500) with high precision (all digits)
+function fibonacci(n) {
+    let a = 1n;
+    let b = 0n;
+    let temp = 0n;
+    while (n >= 0) {
+        temp = a;
+        a = a + b;
+        b = temp;
+        n--;
+    }
+    return b;
+}
+
+console.log('Fibonacci(500):');
+console.log(fibonacci(500));
 // 53. Calculate 70! with high precision (all digits)
+function factorial(n) {
+    let result = 1n;
+    while (n > 1) {
+        result *= BigInt(n);
+        n--;
+    }
+    return result;
+}
+console.log('factorial(70):');
+console.log(factorial(70));
