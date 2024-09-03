@@ -179,9 +179,14 @@ function extractColumn(arr, column) {
     return arr.map(row => row[column]);
 }
 
-console.log(extractColumn([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 1));
+// console.log(extractColumn([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 1));
 // 44. Create a function that will convert a string containing a binary number into a
 // number
+function binaryToNumber(binary) {
+    return parseInt(binary, 2);
+}
+
+console.log(binaryToNumber('1010'));
 // 45. Create a function to calculate the sum of all the numbers in a jagged array
 // (contains numbers or other arrays of numbers on an unlimited number of
 // levels)
