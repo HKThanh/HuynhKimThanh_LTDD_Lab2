@@ -213,6 +213,20 @@ function shuffleArray(arr) {
     return arr.sort(() => Math.random() - 0.5);
 }
 
-console.log(shuffleArray(['Hello', 'World', 'LongestWord', 'a', 'b', 'X', 'Y', 'Z']));
+// console.log(shuffleArray(['Hello', 'World', 'LongestWord', 'a', 'b', 'X', 'Y', 'Z']));
 // 50. Create a function that will receive n as argument and return an array of n
 // random numbers from 1 to n. The numbers should be unique inside the array.
+function randomUniqueNumbers(n) {
+    let arr = [];
+    for (let i = 1; i <= n; i++) {
+        arr.push(i);
+    }
+
+    return shuffleArray(arr);
+}
+
+console.log(randomUniqueNumbers(10));
+// 51. Find the frequency of letters inside a string. Return the result as an array of
+// arrays. Each subarray has 2 elements: letter and number of occurrences.
+// 52. Calculate Fibonacci(500) with high precision (all digits)
+// 53. Calculate 70! with high precision (all digits)
