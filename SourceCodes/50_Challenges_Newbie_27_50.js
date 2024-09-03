@@ -194,8 +194,13 @@ function sumOfJaggedArray(arr) {
     return arr.flat(Infinity).reduce((accumulator, currentValue) => accumulator + currentValue);
 }
 
-console.log(sumOfJaggedArray([1, 2, [3, 4, [5, 6, [7, 8, 9]]]]));
+// console.log(sumOfJaggedArray([1, 2, [3, 4, [5, 6, [7, 8, 9]]]]));
 // 46. Find the maximum number in a jagged array of numbers or array of numbers
+function maxOfJaggedArray(arr) {
+    return Math.max(...arr.flat(Infinity));
+}
+
+console.log(maxOfJaggedArray([1, 2, [3, 4, [5, 6, [7, 8, 9]]]]));
 // 47. Deep copy a jagged array with numbers or other arrays in a new array
 // 48. Create a function to return the longest word in a string
 // 49. Shuffle an array of strings
